@@ -13,18 +13,37 @@ namespace FacultyComputerScience
             var stud1 = new Students(firstName: "Ivan", secondName: "Petrov", age: 21);
             var stud2 = new Students(firstName: "Petr", secondName: "Ivanov", age: 20);
             var stud3 = new Students(firstName: "Andrey", secondName: "Zhmurin", age: 22);
+
             var stud4 = new Students(firstName: "Semen", secondName: "Bulgakov", age: 19);
+            var stud5 = new Students(firstName: "Alexandr", secondName: "Pushkin", age: 20);
+            var stud6 = new Students(firstName: "Iosif", secondName: "Stalin", age: 22);
+
+            var stud7 = new Students(firstName: "Adolf", secondName: "Gitler", age: 21);
+            var stud8 = new Students(firstName: "Vasya", secondName: "Pupkin", age: 20);
+            var stud9 = new Students(firstName: "Pavel", secondName: "Morozov", age: 22);
+
+            var stud10 = new Students(firstName: "Anton", secondName: "Chehov", age: 22);
+            var stud11 = new Students(firstName: "Winston", secondName: "Cherchel", age: 21);
+            var stud12 = new Students(firstName: "Alexandr", secondName: "Makedonskiy", age: 22);
 
             var group1 = new Groups(stud1, "Group 1");
-            var group2 = new Groups(stud3, "Group 2");
             group1.Add(stud2);
-            group2.Add(stud4);
+            group1.Add(stud3);
+
+            var group2 = new Groups(stud4, "Group 2");
+            group2.Add(stud5);
+            group2.Add(stud6);
+
+            var group3 = new Groups(stud7, "Group 3");
+            group2.Add(stud8);
+            group2.Add(stud9);
+
+            var group4 = new Groups(stud10, "Group 4");
+            group2.Add(stud10);
+            group2.Add(stud10);
+
 
             
-            Console.WriteLine(group1.Group[0].FirstName + " " + group1.GroupName);
-            Console.WriteLine(group1.Group[1].FirstName + " " + group1.GroupName);
-            Console.WriteLine(group2.Group[0].FirstName + " " + group2.GroupName);
-            Console.WriteLine(group2.Group[1].FirstName + " " + group2.GroupName);
         }
     }
 }
