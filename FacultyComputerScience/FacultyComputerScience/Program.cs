@@ -13,6 +13,7 @@ namespace FacultyComputerScience
             var faculty = new Faculty();
             InitFaculty(faculty);
             faculty.PrintListSpecialty();
+           // Console.WriteLine(faculty.Specialty[0].Groups[0].Students[0].AcademicDegree);
         }
 
         public static void InitFaculty(Faculty faculty)
