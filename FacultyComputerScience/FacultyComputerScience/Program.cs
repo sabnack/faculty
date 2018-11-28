@@ -13,6 +13,7 @@ namespace FacultyComputerScience
             var faculty = new Faculty();
             InitFaculty(faculty);
             faculty.PrintListSpecialty();
+            faculty.PrintStudentsList();
            // Console.WriteLine(faculty.Specialty[0].Groups[0].Students[0].AcademicDegree);
         }
 
@@ -43,12 +44,12 @@ namespace FacultyComputerScience
             group2.Add(stud6);
 
             var group3 = new Group(stud7, "Group 3");
-            group2.Add(stud8);
-            group2.Add(stud9);
+            group3.Add(stud8);
+            group3.Add(stud9);
 
             var group4 = new Group(stud10, "Group 4");
-            group2.Add(stud10);
-            group2.Add(stud10);
+            group4.Add(stud11);
+            group4.Add(stud12);
 
             var subject1 = new Subject("Computer Systems and Networks", 150);
             var subject2 = new Subject("Network Engineering", 170);
