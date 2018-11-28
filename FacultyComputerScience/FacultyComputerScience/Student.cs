@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace FacultyComputerScience
 {
-    class Students
+    class Student
     {
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public int Age { get; set; }
 
-        public Students(string firstName, string secondName, int age)
+        public Student(string firstName, string secondName, int age)
         {
             FirstName = firstName;
             SecondName = secondName;

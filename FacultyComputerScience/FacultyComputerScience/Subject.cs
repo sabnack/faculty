@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace FacultyComputerScience
 {
-    class Subjects
+    class Subject
     {
-        public string SubjectName;
-        public int HoursAmount;
+        public string SubjectName { get; set; }
+        public int HoursAmount { get; set; }
 
-        public Subjects(string subjectName, int hoursAmount)
+        public Subject(string subjectName, int hoursAmount)
         {
             SubjectName = subjectName;
             HoursAmount = hoursAmount;

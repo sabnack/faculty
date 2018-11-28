@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace FacultyComputerScience
 {
-    class Groups
+    class Group
     {
-        public List<Students> Group;
-        public readonly string GroupName;
+        public List<Student> Groups { get; set; }
+        public string GroupName { get; }
 
-        public Groups(Students student, string groupName)
+        public Group(Student student, string groupName)
         {
-            Group = new List<Students>
+            Groups = new List<Student>
             {
                 student
             };
             GroupName = groupName;
         }
 
-        public void Add(Students student)
+        public void Add(Student student)
         {
-            Group.Add(student);
+            Groups.Add(student);
         }
     }
 }

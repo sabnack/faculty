@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace FacultyComputerScience
 {
-    static class Faculty
+    class Faculty
     {
         public const string NameOfFaculty = "Computer science";
-        public static List<Specialties> Specialty = new List<Specialties>();
+        public List<Specialty> Specialty { get; }
 
-        public static void PrintListSpecialty()
+        public Faculty()
+        {
+            Specialty = new List<Specialty>();
+        }
+
+        public void PrintListSpecialty()
         {
             Console.WriteLine("List of specialties");
             foreach (var item in Specialty)
