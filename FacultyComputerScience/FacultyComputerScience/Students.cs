@@ -14,7 +14,7 @@ namespace FacultyComputerScience
 
         public Students(string firstName, string secondName, int age)
         {
-            FirstName =firstName;
+            FirstName = firstName;
             SecondName = secondName;
             Age = age;
         }

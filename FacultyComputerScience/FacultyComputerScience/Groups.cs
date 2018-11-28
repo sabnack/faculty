@@ -8,7 +8,7 @@ namespace FacultyComputerScience
 {
     class Groups
     {
-        List<Students> Group;
+        public List<Students> Group = new List<Students>();
         public readonly string GroupName;
 
         public Groups(Students student, string groupName)
