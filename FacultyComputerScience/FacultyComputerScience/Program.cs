@@ -10,6 +10,12 @@ namespace FacultyComputerScience
     {
         static void Main(string[] args)
         {
+            InitFaculty();
+            Faculty.PrintListSpecialty();
+        }
+
+        public static void InitFaculty()
+        {
             var stud1 = new Students(firstName: "Ivan", secondName: "Petrov", age: 21);
             var stud2 = new Students(firstName: "Petr", secondName: "Ivanov", age: 20);
             var stud3 = new Students(firstName: "Andrey", secondName: "Zhmurin", age: 22);
@@ -42,8 +48,22 @@ namespace FacultyComputerScience
             group2.Add(stud10);
             group2.Add(stud10);
 
+            var subject1 = new Subjects("Computer Systems and Networks", 150);
+            var subject2 = new Subjects("Network Engineering", 170);
 
-            
+            var subject3 = new Subjects("Artificial Intelligence", 160);
+            var subject4 = new Subjects("Computer Vision", 145);
+
+            var specialty1 = new Specialties(group1, subject1, "Information Technology");
+            specialty1.AddGroup(group2);
+            specialty1.AddSubject(subject2);
+
+            var specialty2 = new Specialties(group3, subject3, "Cybernetics");
+            specialty1.AddGroup(group4);
+            specialty1.AddSubject(subject4);
+
+            Faculty.Specialty.Add(specialty1);
+            Faculty.Specialty.Add(specialty2);
         }
     }
 }

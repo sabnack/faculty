@@ -10,5 +10,14 @@ namespace FacultyComputerScience
     {
         public const string NameOfFaculty = "Computer science";
         public static List<Specialties> Specialty = new List<Specialties>();
+
+        public static void PrintListSpecialty()
+        {
+            Console.WriteLine("List of specialties");
+            foreach (var item in Specialty)
+            {
+                Console.WriteLine(item.SpecialtyName);
+            }
+        }
     }
 }
