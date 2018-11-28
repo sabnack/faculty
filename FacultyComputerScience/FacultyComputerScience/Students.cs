@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace FacultyComputerScience
 {
-    class Student
+    class Students
     {
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public int Age { get; set; }
 
-        public Student(string firstName, string secondName, int age)
+        public Students(string firstName, string secondName, int age)
         {
-            FirstName = firstName;
+            FirstName =firstName;
             SecondName = secondName;
             Age = age;
         }
