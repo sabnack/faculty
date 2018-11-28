@@ -11,6 +11,7 @@ namespace FacultyComputerScience
         static void Main(string[] args)
         {
             InitFaculty();
+            Faculty.PrintListSpecialty();
         }
 
         public static void InitFaculty()
