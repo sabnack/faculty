@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace FacultyComputerScience
 {
-    class Student
+    class Student:Person
     {
-        public string FirstName { get; set; }
-        public string SecondName { get; set; }
-        public int Age { get; set; }
+        public string AcademicDegree;
 
-        public Student(string firstName, string secondName, int age)
+        public Student(string firstName, string secondName, int age, string academicDegree = "Bachelor")
+            :base(firstName, secondName, age)
         {
-            FirstName = firstName;
-            SecondName = secondName;
-            Age = age;
+            AcademicDegree = academicDegree;
         }
     }
 }

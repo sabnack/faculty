@@ -8,12 +8,12 @@ namespace FacultyComputerScience
 {
     class Group
     {
-        public List<Student> Groups { get; set; }
+        public List<Student> Students { get; set; }
         public string GroupName { get; }
 
         public Group(Student student, string groupName)
         {
-            Groups = new List<Student>
+            Students = new List<Student>
             {
                 student
             };
@@ -22,7 +22,7 @@ namespace FacultyComputerScience
 
         public void Add(Student student)
         {
-            Groups.Add(student);
+            Students.Add(student);
         }
     }
 }
