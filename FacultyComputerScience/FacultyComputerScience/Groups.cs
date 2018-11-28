@@ -16,5 +16,10 @@ namespace FacultyComputerScience
             Group.Add(student);
             GroupName = groupName;
         }
+
+        public void Add(Students student)
+        {
+            Group.Add(student);
+        }
     }
 }
