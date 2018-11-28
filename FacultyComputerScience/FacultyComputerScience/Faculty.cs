@@ -16,12 +16,21 @@ namespace FacultyComputerScience
             Specialty = new List<Specialty>();
         }
 
-        public void PrintListSpecialty()
+        public void PrintSubjectsList()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("List of specialties");
-            Console.ResetColor();
+            PrintMessage("List of subjets");
+            foreach (var spec in Specialty)
+            {
+                foreach (var subj in spec.Subjects)
+                {
+                    Console.WriteLine(subj.SubjectName);
+                }
+            }
+        }
 
+        public void PrintSpecialtiesList()
+        {
+            PrintMessage("List of specialties");
             foreach (var item in Specialty)
             {
                 Console.WriteLine(item.SpecialtyName);
@@ -30,9 +39,7 @@ namespace FacultyComputerScience
 
         public void PrintStudentsList()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Students list");
-            Console.ResetColor();
+            PrintMessage("Students list");
 
             foreach (var spec in Specialty)
             {
@@ -44,6 +51,13 @@ namespace FacultyComputerScience
                     }
                 }
             }
+        }
+
+        private void PrintMessage(string str)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(str);
+            Console.ResetColor();
         }
     }
 }

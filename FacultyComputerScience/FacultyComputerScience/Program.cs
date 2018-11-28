@@ -12,8 +12,9 @@ namespace FacultyComputerScience
         {
             var faculty = new Faculty();
             InitFaculty(faculty);
-            faculty.PrintListSpecialty();
+            faculty.PrintSpecialtiesList();
             faculty.PrintStudentsList();
+            faculty.PrintSubjectsList();
            // Console.WriteLine(faculty.Specialty[0].Groups[0].Students[0].AcademicDegree);
         }
 
