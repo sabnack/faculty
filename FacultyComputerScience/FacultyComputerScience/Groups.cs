@@ -8,12 +8,15 @@ namespace FacultyComputerScience
 {
     class Groups
     {
-        public List<Students> Group = new List<Students>();
+        public List<Students> Group;
         public readonly string GroupName;
 
         public Groups(Students student, string groupName)
         {
-            Group.Add(student);
+            Group = new List<Students>
+            {
+                student
+            };
             GroupName = groupName;
         }
 

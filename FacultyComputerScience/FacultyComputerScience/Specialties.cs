@@ -8,14 +8,22 @@ namespace FacultyComputerScience
 {
     class Specialties
     {
-        public List<Groups> Groups = new List<Groups>();
-        public List<Subjects> Subject = new List<Subjects>();
+        public List<Groups> Groups;
+        public List<Subjects> Subject;
         public readonly string SpecialtyName;
 
         public Specialties(Groups group, Subjects subject, string specialtyName)
         {
-            Groups.Add(group);
-            Subject.Add(subject);
+            Groups = new List<Groups>
+            {
+                group
+            };
+
+            Subject = new List<Subjects>
+            {
+                subject
+            };
+
             SpecialtyName = specialtyName;
         }
 

@@ -8,7 +8,7 @@ namespace FacultyComputerScience
 {
     static class Faculty
     {
-        public static readonly string NameOfFaculty = "Computer science";
+        public const string NameOfFaculty = "Computer science";
         public static List<Specialties> Specialty = new List<Specialties>();
     }
 }
