@@ -11,12 +11,9 @@ namespace FacultyComputerScience
         public List<Student> Students { get; set; }
         public string GroupName { get; }
 
-        public Group(Student student, string groupName)
+        public Group(string groupName)
         {
-            Students = new List<Student>
-            {
-                student
-            };
+            Students = new List<Student>();
             GroupName = groupName;
         }
 

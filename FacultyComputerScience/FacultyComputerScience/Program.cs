@@ -43,19 +43,23 @@ namespace FacultyComputerScience
             var stud11 = new Student(firstName: "Winston", secondName: "Cherchel", age: 21);
             var stud12 = new Student(firstName: "Alexandr", secondName: "Makedonskiy", age: 22);
 
-            var group1 = new Group(stud1, "Group 1");
+            var group1 = new Group("Group 1");
+            group1.Add(stud1);
             group1.Add(stud2);
             group1.Add(stud3);
 
-            var group2 = new Group(stud4, "Group 2");
+            var group2 = new Group("Group 2");
+            group2.Add(stud4);
             group2.Add(stud5);
             group2.Add(stud6);
 
-            var group3 = new Group(stud7, "Group 3");
+            var group3 = new Group("Group 3");
+            group3.Add(stud7);
             group3.Add(stud8);
             group3.Add(stud9);
 
-            var group4 = new Group(stud10, "Group 4");
+            var group4 = new Group("Group 4");
+            group4.Add(stud10);
             group4.Add(stud11);
             group4.Add(stud12);
 
@@ -65,11 +69,15 @@ namespace FacultyComputerScience
             var subject3 = new Subject("Artificial Intelligence", 160);
             var subject4 = new Subject("Computer Vision", 145);
 
-            var specialty1 = new Specialty(group1, subject1, "Information Technology");
+            var specialty1 = new Specialty("Information Technology");
+            specialty1.AddGroup(group1);
+            specialty1.AddSubject(subject1);
             specialty1.AddGroup(group2);
             specialty1.AddSubject(subject2);
 
-            var specialty2 = new Specialty(group3, subject3, "Cybernetics");
+            var specialty2 = new Specialty("Cybernetics");
+            specialty1.AddGroup(group3);
+            specialty1.AddSubject(subject3);
             specialty1.AddGroup(group4);
             specialty1.AddSubject(subject4);
             
