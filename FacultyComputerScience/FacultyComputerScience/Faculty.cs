@@ -11,17 +11,19 @@ namespace FacultyComputerScience
         public const string NameOfFaculty = "Computer science";
         public List<Specialty> Specialty { get; }
         public List<Teacher> Teachers { get; }
+        private IWriter _writer { get; }
 
-        public Faculty()
+        public Faculty(IWriter writer)
         {
             Specialty = new List<Specialty>();
             Teachers = new List<Teacher>();
+            _writer = writer;
         }
 
         public void PrintTeachersList()
         {
-            Program.PrintMessage("Teachers List", ConsoleColor.Red);
-            Teachers.ForEach(t => Console.WriteLine("{0} {1} {2}", t.FirstName, t.SecondName, t.AcademicStatus));
+            _writer.WriteInfo("Teachers List", ConsoleColor.Red);
+            Teachers.ForEach(t => _writer.WriteInfo(string.Format("{0} {1} {2}", t.FirstName, t.SecondName, t.AcademicStatus)));
         }
 
         public void AddTeacher(Teacher teacher)
@@ -31,22 +33,21 @@ namespace FacultyComputerScience
 
         public void PrintSubjectsList()
         {
-            Program.PrintMessage("List of subjets", ConsoleColor.Yellow);
-        //    Specialty.ForEach(s => s.Subjects.ForEach(i => Console.WriteLine(i.SubjectName)));
+            _writer.WriteInfo("List of subjets", ConsoleColor.Yellow);
             var tmp = new List<string>();
             Specialty.ForEach(i => tmp.AddRange(i.Subjects.Select(h => h.SubjectName)));
-            tmp.Distinct().ToList().ForEach(i => Console.WriteLine(i));
+            tmp.Distinct().ToList().ForEach(i => _writer.WriteInfo(i));
         }
 
         public void PrintSpecialtiesList()
         {
-            Program.PrintMessage("List of specialties", ConsoleColor.Yellow);
-            Specialty.ForEach(i => Console.WriteLine(i.SpecialtyName));
+            _writer.WriteInfo("List of specialties", ConsoleColor.Yellow);
+            Specialty.ForEach(i => _writer.WriteInfo(i.SpecialtyName));
         }
 
         public void PrintStudentsList()
         {
-            Program.PrintMessage("Students list", ConsoleColor.Yellow);
+            _writer.WriteInfo("Students list", ConsoleColor.Yellow);
             Specialty.ForEach(g => g.Groups.ForEach(s => s.Students.ForEach(i => Console.WriteLine("{0} {1}", i.FirstName, i.SecondName))));
         }
 

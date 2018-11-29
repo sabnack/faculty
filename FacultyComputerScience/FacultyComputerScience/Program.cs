@@ -10,7 +10,8 @@ namespace FacultyComputerScience
     {
         static void Main(string[] args)
         {
-            var faculty = new Faculty();
+            var consoleWriter = new ConsoleWriter();
+            var faculty = new Faculty(consoleWriter);
             InitFaculty(faculty);
             faculty.PrintSpecialtiesList();
             faculty.PrintStudentsList();
