@@ -10,10 +10,23 @@ namespace FacultyComputerScience
     {
         public const string NameOfFaculty = "Computer science";
         public List<Specialty> Specialty { get; }
+        public List<Teacher> Teachers { get; }
 
         public Faculty()
         {
             Specialty = new List<Specialty>();
+            Teachers = new List<Teacher>();
+        }
+
+        public void PrintTeachersList()
+        {
+            Program.PrintMessage("Teachers List", ConsoleColor.Red);
+            Teachers.ForEach(t => Console.WriteLine("{0} {1} {2}", t.FirstName, t.SecondName, t.AcademicStatus));
+        }
+
+        public void AddTeacher(Teacher teacher)
+        {
+            Teachers.Add(teacher);
         }
 
         public void PrintSubjectsList()
