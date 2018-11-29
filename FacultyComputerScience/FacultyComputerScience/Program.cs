@@ -18,6 +18,13 @@ namespace FacultyComputerScience
            // Console.WriteLine(faculty.Specialty[0].Groups[0].Students[0].AcademicDegree);
         }
 
+        public static void PrintMessage(string str, ConsoleColor color)
+        {
+            Console.ForegroundColor = color;
+            Console.WriteLine(str);
+            Console.ResetColor();
+        }
+
         public static void InitFaculty(Faculty faculty)
         {
             var stud1 = new Student(firstName: "Ivan", secondName: "Petrov", age: 21);
