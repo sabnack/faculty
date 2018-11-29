@@ -12,18 +12,10 @@ namespace FacultyComputerScience
         public List<Subject> Subjects { get; set; }
         public string SpecialtyName { get; }
 
-        public Specialty(Group group, Subject subject, string specialtyName)
+        public Specialty(string specialtyName)
         {
-            Groups = new List<Group>
-            {
-                group
-            };
-
-            Subjects = new List<Subject>
-            {
-                subject
-            };
-
+            Groups = new List<Group>();
+            Subjects = new List<Subject>();
             SpecialtyName = specialtyName;
         }
 
