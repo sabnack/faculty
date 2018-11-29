@@ -18,44 +18,25 @@ namespace FacultyComputerScience
 
         public void PrintSubjectsList()
         {
-            PrintMessage("List of subjets");
-            foreach (var spec in Specialty)
-            {
-                foreach (var subj in spec.Subjects)
-                {
-                    Console.WriteLine(subj.SubjectName);
-                }
-            }
+            PrintMessage("List of subjets", ConsoleColor.Yellow);
+            Specialty.ForEach(s => s.Subjects.ForEach(i => Console.WriteLine(i.SubjectName)));
         }
 
         public void PrintSpecialtiesList()
         {
-            PrintMessage("List of specialties");
-            foreach (var item in Specialty)
-            {
-                Console.WriteLine(item.SpecialtyName);
-            }
+            PrintMessage("List of specialties", ConsoleColor.Yellow);
+            Specialty.ForEach(i => Console.WriteLine(i.SpecialtyName));
         }
 
         public void PrintStudentsList()
         {
-            PrintMessage("Students list");
-
-            foreach (var spec in Specialty)
-            {
-                foreach (var group in spec.Groups)
-                {
-                    foreach (var student in group.Students)
-                    {
-                        Console.WriteLine("{0} {1}",student.FirstName, student.SecondName);
-                    }
-                }
-            }
+            PrintMessage("Students list", ConsoleColor.Yellow);
+            Specialty.ForEach(g => g.Groups.ForEach(s => s.Students.ForEach(i => Console.WriteLine("{0} {1}", i.FirstName, i.SecondName))));
         }
 
-        private void PrintMessage(string str)
+        private void PrintMessage(string str, ConsoleColor color)
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = color;
             Console.WriteLine(str);
             Console.ResetColor();
         }
