@@ -15,6 +15,7 @@ namespace FacultyComputerScience
             faculty.PrintSpecialtiesList();
             faculty.PrintStudentsList();
             faculty.PrintSubjectsList();
+            faculty.PrintTeachersList();
            // Console.WriteLine(faculty.Specialty[0].Groups[0].Students[0].AcademicDegree);
         }
 
@@ -42,6 +43,12 @@ namespace FacultyComputerScience
             var stud10 = new Student(firstName: "Anton", secondName: "Chehov", age: 22);
             var stud11 = new Student(firstName: "Winston", secondName: "Cherchel", age: 21);
             var stud12 = new Student(firstName: "Alexandr", secondName: "Makedonskiy", age: 22);
+
+            var teacher1 = new Teacher("Ivan", "Dubinin", 55);
+            var teacher2 = new Teacher("Semen", "Volkov", 43);
+            var teacher3 = new Teacher("Stephan", "Kozimir", 39);
+
+            
 
             var group1 = new Group("Group 1");
             group1.Add(stud1);
@@ -83,6 +90,19 @@ namespace FacultyComputerScience
             specialty2.AddGroup(group4);
             specialty2.AddSubject(subject4);
             specialty2.PrintStudentsList();
+
+            teacher1.AddGroup(group1);
+            teacher2.AddGroup(group2);
+            teacher3.AddGroup(group3);
+
+            teacher1.AddSubjects(subject1);
+            teacher1.AddSubjects(subject4);
+            teacher2.AddSubjects(subject2);
+            teacher3.AddSubjects(subject3);
+
+            faculty.AddTeacher(teacher1);
+            faculty.AddTeacher(teacher2);
+            faculty.AddTeacher(teacher3);
 
             faculty.Specialty.Add(specialty1);
             faculty.Specialty.Add(specialty2);
