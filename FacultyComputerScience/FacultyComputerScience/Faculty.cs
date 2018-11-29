@@ -19,7 +19,10 @@ namespace FacultyComputerScience
         public void PrintSubjectsList()
         {
             Program.PrintMessage("List of subjets", ConsoleColor.Yellow);
-            Specialty.ForEach(s => s.Subjects.ForEach(i => Console.WriteLine(i.SubjectName)));
+        //    Specialty.ForEach(s => s.Subjects.ForEach(i => Console.WriteLine(i.SubjectName)));
+            var tmp = new List<string>();
+            Specialty.ForEach(i => tmp.AddRange(i.Subjects.Select(h => h.SubjectName)));
+            tmp.Distinct().ToList().ForEach(i => Console.WriteLine(i));
         }
 
         public void PrintSpecialtiesList()
