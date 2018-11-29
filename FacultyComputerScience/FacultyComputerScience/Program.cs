@@ -78,11 +78,12 @@ namespace FacultyComputerScience
             specialty1.AddSubject(subject5);
 
             var specialty2 = new Specialty("Cybernetics");
-            specialty1.AddGroup(group3);
-            specialty1.AddSubject(subject3);
-            specialty1.AddGroup(group4);
-            specialty1.AddSubject(subject4);
-            
+            specialty2.AddGroup(group3);
+            specialty2.AddSubject(subject3);
+            specialty2.AddGroup(group4);
+            specialty2.AddSubject(subject4);
+            specialty2.PrintStudentsList();
+
             faculty.Specialty.Add(specialty1);
             faculty.Specialty.Add(specialty2);
         }

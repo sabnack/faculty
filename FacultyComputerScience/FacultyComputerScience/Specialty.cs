@@ -28,5 +28,12 @@ namespace FacultyComputerScience
         {
             Subjects.Add(subject);
         }
+
+        public void PrintStudentsList()
+        {
+            Program.PrintMessage("List of specialty students", ConsoleColor.Yellow);
+            Groups.ForEach(s => s.Students.ForEach(i => Console.WriteLine("{0} {1}", i.FirstName, i.SecondName)));
+        }
+
     }
 }
