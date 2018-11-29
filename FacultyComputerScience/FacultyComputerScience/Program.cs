@@ -65,6 +65,7 @@ namespace FacultyComputerScience
 
             var subject1 = new Subject("Computer Systems and Networks", 150);
             var subject2 = new Subject("Network Engineering", 170);
+            var subject5 = new Subject("Artificial Intelligence", 160);
 
             var subject3 = new Subject("Artificial Intelligence", 160);
             var subject4 = new Subject("Computer Vision", 145);
@@ -74,6 +75,7 @@ namespace FacultyComputerScience
             specialty1.AddSubject(subject1);
             specialty1.AddGroup(group2);
             specialty1.AddSubject(subject2);
+            specialty1.AddSubject(subject5);
 
             var specialty2 = new Specialty("Cybernetics");
             specialty1.AddGroup(group3);
