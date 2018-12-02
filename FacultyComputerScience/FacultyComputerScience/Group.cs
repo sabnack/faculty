@@ -10,11 +10,13 @@ namespace FacultyComputerScience
     {
         public List<Student> Students { get; set; }
         public string GroupName { get; }
+        private IWriter _writer { get; }
 
-        public Group(string groupName)
+        public Group(IWriter writer, string groupName)
         {
             Students = new List<Student>();
             GroupName = groupName;
+            _writer = writer;
         }
 
         public void Add(Student student)
@@ -24,9 +26,9 @@ namespace FacultyComputerScience
 
         public void PrintStudentsList()
         {
-            Program.PrintMessage("Students group list", ConsoleColor.Yellow);
-            Program.PrintMessage(GroupName, ConsoleColor.Green);
-            Students.ForEach(i => Console.WriteLine("{0} {1}", i.FirstName, i.SecondName));
+            _writer.WriteInfo("Students group list", ConsoleColor.Yellow);
+            _writer.WriteInfo(GroupName, ConsoleColor.Green);
+            Students.ForEach(i => _writer.WriteInfo(string.Format("{0} {1}", i.FirstName, i.SecondName)));
         }
     }
 }

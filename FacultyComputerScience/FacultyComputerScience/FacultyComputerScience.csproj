@@ -42,10 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bachelor.cs" />
     <Compile Include="ConsoleWriter.cs" />
     <Compile Include="Faculty.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="IWriter.cs" />
+    <Compile Include="Master.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

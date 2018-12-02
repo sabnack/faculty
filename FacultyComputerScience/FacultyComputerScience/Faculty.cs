@@ -48,7 +48,7 @@ namespace FacultyComputerScience
         public void PrintStudentsList()
         {
             _writer.WriteInfo("Students list", ConsoleColor.Yellow);
-            Specialty.ForEach(g => g.Groups.ForEach(s => s.Students.ForEach(i => Console.WriteLine("{0} {1}", i.FirstName, i.SecondName))));
+            Specialty.ForEach(g => g.Groups.ForEach(s => s.Students.ForEach(i => _writer.WriteInfo(string.Format("{0} {1}", i.FirstName, i.SecondName)))));
         }
 
         
